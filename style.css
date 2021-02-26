@@ -1,0 +1,154 @@
+html {overflow-x: hidden;}
+@font-face {
+	font-family: 'Gotham-Bold'; 
+	src: url(fonts/14006.otf); 
+}
+@font-face {
+	font-family: 'RotisSansSerif'; 
+	src: url(fonts/RotisSansSerifW1G-Bold.otf); 
+}
+@font-face {
+	font-family: 'Museo-500'; 
+	src: url(fonts/museo-500.otf); 
+}
+@font-face {
+	font-family: 'Museo-700'; 
+	src: url(fonts/Museo700.otf); 
+}
+.header {
+    padding-top: 20px;
+    height: 112px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slogan {
+    font-family: 'Gotham-Bold';
+    color: white;
+    float: left;
+    padding-top: 45px;
+    text-align: right;
+}
+.slogan h6{
+    font-family: 'RotisSansSerif';
+}
+h1,h6{
+    margin: 5px;
+}
+.ad {
+    font-family: 'Gotham-Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    height: 86px;
+    width: 726px;
+    float: right;
+}
+.telo{
+    margin-left: auto;
+    margin-right: auto;
+    height: 1330px;
+    max-width: 1200px;
+    background-color: white;
+}
+body {
+    background-image: url(source/fon.jpg);
+    background-repeat: no-repeat;
+    background-color: #333333;
+}
+.panel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    height: 30px;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(255, 240, 31), rgb(255, 185, 33));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.knopki {
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.auth {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+bt1 {
+    margin: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 1s;
+}
+.knopki div, .auth div{
+width: 1px;
+height: 30px;
+background-color: rgb(255, 115, 0);
+}
+bt1 a{
+    color: #fff;
+    text-decoration: none;
+}
+bt1:hover{
+    margin: 16px;
+    background-color: #000;
+    transition: all 1s;
+}
+
+@media (max-width:995px) {
+    .telo{
+        height: 2500px;
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        height: 170px;
+        padding-top: 0;
+    }
+    .slogan {
+        padding-top: 15px;
+    }
+}
+    /* только для устройств с малым размером экрана */
+    @media (max-width:686px) {
+    .telo{
+        height: 2730px;
+    }
+    .ad{
+        max-width: 100%;
+    }
+    .knopki{
+        flex-direction: column;
+        height: 34px;
+        overflow: hidden;
+        transition: all 0.7s;
+    }
+    .knopki:hover{
+        flex-direction: column;
+        height: 220px;
+        background-color: black;
+        transform: translateY(96px);
+        transition: all 0.7s;
+    }
+    bt1 {
+        margin: 10px;
+        transition: all 0.4s;
+    }
+    .knopki div{
+        width: 50px;
+        height: 1px;
+        background-color: white;
+    }
+    bt1:hover{
+        margin: 10px;
+        background-color: blue;
+        transition: all 1s;
+    }
+}
