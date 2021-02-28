@@ -101,6 +101,22 @@ bt1:hover{
     background-color: #000;
     transition: all 1s;
 }
+.steam{
+    display: flex;
+    position: relative;
+    width: auto;
+    background-color: #333333;
+}
+.ramka{
+    position: absolute;
+}
+.steam>img{
+    padding: 20px;
+}
+.steam h2{
+    color: #fff;
+    font-family: 'Gotham-Bold';
+}
 
 @media (max-width:995px) {
     .telo{
