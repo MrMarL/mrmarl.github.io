@@ -102,15 +102,18 @@ bt1:hover{
     transition: all 1s;
 }
 .steam{
-    display: flex;
-    position: relative;
-    width: auto;
-    background-color: #333333;
+    background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/991980/fb35c9934621215738372c5ae8689fe37ecd9d6d.jpg' );
 }
 .ramka{
     position: absolute;
 }
-.steam>img{
+.steam2{
+    display: flex;
+    position: relative;
+    width: auto;
+    background: linear-gradient(135deg, #33333390, #74254a70);
+}
+.steam2>img{
     padding: 20px;
 }
 h2 , h5{
