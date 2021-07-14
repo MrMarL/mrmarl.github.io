@@ -178,7 +178,34 @@ h2 , h5{
 .coub h2{
     font-size: 50px
 }
-
+.paypal{
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    background-color: #333333;
+    overflow: hidden;
+    height: 270px;
+    align-items: center;
+    max-width: 400px;
+    min-width: 300px;
+    background: url("https://www.paypalobjects.com/profiles/cover/yellow.jpg") 50% 0% / cover no-repeat;
+    border-radius: 5% 5% 100% 100% / 10% 10% 50% 50%;
+}
+.paypal .fon{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+.paypal img {
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+    border: ridge #fff 6px;
+    border-radius: 100%;
+}
 @media (max-width:995px) {
     .telo{
         height: 2500px;
