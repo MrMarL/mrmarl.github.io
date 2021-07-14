@@ -184,27 +184,67 @@ h2 , h5{
     display: flex;
     justify-content: center;
     width: auto;
-    background-color: #333333;
+    background-color: #f5f7f8;
     overflow: hidden;
-    height: 270px;
+    height: 260px;
     align-items: center;
     max-width: 400px;
-    min-width: 300px;
+    min-width: 320px;
+    flex-direction: column;
+    border-radius: 3%;
+}
+.paypal_main a >img {
+    margin: 5px;
+}
+.paypal_main{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    height: 190px;
+    align-items: center;
+    width: 100%;
     background: url("https://www.paypalobjects.com/profiles/cover/yellow.jpg") 50% 0% / cover no-repeat;
     border-radius: 5% 5% 100% 100% / 10% 10% 50% 50%;
 }
 .paypal .fon{
-    width: 100%;
+    width: 28%;
     height: 80%;
-    display: flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
-.paypal img {
+.paypal_main div img {
     width: 100%;
-    padding-left: auto;
-    padding-right: auto;
     border: ridge #fff 6px;
     border-radius: 100%;
+    position: relative;
+    z-index: 1;
+}
+.paypal .opis{
+    position: absolute;
+    top: 130px;
+    background-color: #fff;
+    border-radius: 10%;
+    width: 68%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.paypal .opis a{
+    font-family: PayPalSansBig-Regular,Helvetica,Arial,sans-serif;
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+.paypal .opis span{
+    font-family: PayPalSansBig-Regular,Helvetica,Arial,sans-serif;
+    color: rgb(94, 94, 94);
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 @media (max-width:995px) {
     .telo{
