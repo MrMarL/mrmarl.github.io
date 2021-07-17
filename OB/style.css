@@ -1,19 +1,19 @@
 html {overflow-x: hidden;}
 @font-face {
 	font-family: 'Gotham-Bold'; 
-	src: url(fonts/14006.otf); 
+	src: url(../fonts/14006.otf); 
 }
 @font-face {
 	font-family: 'RotisSansSerif'; 
-	src: url(fonts/RotisSansSerifW1G-Bold.otf); 
+	src: url(../fonts/RotisSansSerifW1G-Bold.otf); 
 }
 @font-face {
 	font-family: 'Museo-500'; 
-	src: url(fonts/museo-500.otf); 
+	src: url(../fonts/museo-500.otf); 
 }
 @font-face {
 	font-family: 'Museo-700'; 
-	src: url(fonts/Museo700.otf); 
+	src: url(../fonts/Museo700.otf); 
 }
 .header {
     padding-top: 20px;
@@ -54,9 +54,9 @@ h1,h6{
     background-color: white;
 }
 body {
-    background-image: url(source/fon.jpg);
-    background-repeat: no-repeat;
+    background-image: url(https://pbs.twimg.com/media/DLdVQvDWsAEbNvN.jpg:large);
     background-color: #333333;
+    background-attachment:fixed;
 }
 .panel {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -101,82 +101,26 @@ bt1:hover{
     background-color: #000;
     transition: all 1s;
 }
-.steam{
-    background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/991980/fb35c9934621215738372c5ae8689fe37ecd9d6d.jpg' );
+.main{
+    margin-top: 5px;
 }
-.ramka{
-    position: absolute;
-}
-.steam2{
-    display: flex;
-    position: relative;
-    width: auto;
-    background: linear-gradient(135deg, #33333390, #74254a70);
-}
-.steam2>img{
-    padding: 20px;
-}
-h2 , h5{
-    color: #fff;
+.FAQ h2{
     font-family: 'Gotham-Bold';
+    margin: 10px;
+    margin-left: 40px;
+    font-size: 2em;
 }
-.to_steam{
-    margin-top: 90px;
-    height: 30px;
-    width: 140px;
-    background-color: #5c5c5c;
-    border-radius: 20px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: #000;
-    font-family: RotisSansSerif;
+.FAQ h3{
+    font-family: 'Gotham-Bold';
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 1.6em;
 }
-.to_steam:hover{
-    background-color: #808080;
-}
-.coub{
-    position: relative;
-    display: flex;
-    width: auto;
-    background-color: #333333;
-    overflow: hidden;
-    height: 270px;
-    align-items: center;
-}
-.coub video{
-    height: 675px;
-    width: 1200px;
-    position: absolute;
-    top: -100px;
-}
-.coub img{
-    z-index: 2;
-    height: 200px;
-    width: 200px;
-    margin: 18px;
-}
-.coub div{
-    z-index: 2;
-}
-.to_coub{
-    margin-top: 60px;
-    margin-bottom: 30px;
-    height: 30px;
-    width: 140px;
-    background-color: #0000003a;
-    border-radius: 20px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: #000;
-    font-family: RotisSansSerif;
-}
-.to_coub:hover{
-    background-color: #000000a6;
-}
-.coub h2{
-    font-size: 50px
+.FAQ h4{
+    font-family: 'Gotham-Bold';
+    margin: 10px;
+    margin-left: 20px;
+    font-size: 1.4em;
 }
 @media (max-width:995px) {
     .telo{
