@@ -115,9 +115,11 @@ bt1:hover{
     margin: 10px;
     margin-left: 20px;
     font-size: 1.6em;
+    margin-top: 28px;
 }
 .FAQ h4{
-    font-family: 'Gotham-Bold';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
     margin: 10px;
     margin-left: 20px;
     font-size: 1.4em;
