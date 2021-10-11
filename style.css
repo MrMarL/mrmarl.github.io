@@ -178,6 +178,14 @@ h2 , h5{
 .coub h2{
     font-size: 50px
 }
+.ip {
+    position: fixed;
+    right: 5px;
+    bottom: 10px;
+    display: block;
+    z-index: 1;
+    filter: invert();
+}
 @media (max-width:995px) {
     .telo{
         height: 2500px;
@@ -226,5 +234,9 @@ h2 , h5{
         margin: 10px;
         background-color: blue;
         transition: all 1s;
+    }
+    .ip {
+        right: 0px;
+        max-width: 100%;
     }
 }
