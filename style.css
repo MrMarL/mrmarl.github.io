@@ -183,7 +183,7 @@ h2 , h5{
     right: 5px;
     bottom: 10px;
     display: block;
-    z-index: 1;
+    z-index: 3;
     filter: invert();
 }
 @media (max-width:995px) {
