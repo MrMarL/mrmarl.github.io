@@ -104,6 +104,10 @@ bt1:hover{
 .main{
     margin-top: 5px;
 }
+.main_in{
+    display: flex;
+    flex-direction: row;
+}
 
 @media (max-width:995px) {
     .telo{
@@ -153,5 +157,8 @@ bt1:hover{
         margin: 10px;
         background-color: blue;
         transition: all 1s;
+    }
+    .main_in{
+      flex-direction: column;
     }
 }
