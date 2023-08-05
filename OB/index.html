@@ -56,10 +56,56 @@
             </div>
             <div class="FAQ">
                 <h2>FAQ</h2>
-                <h3>How to start?(admin)</h3>
-                <h4>You write "/ob set", where the first island will be located. To create a new island "/ob join". (If the island already exists for the player, then he will get to it) Each new island +100 blocks on the X coordinate.</h4>
                 <h3>How to start?</h3>
-                <h4>"/ob join" or "/ob j".</h4>
+                <h4>
+                  1. Find a starting location for the game and type /ob set. This command will spawn a grass block at the user's location and be will the first available island.
+                </h4>
+                <h4>
+                  2. Join the game by typing /ob join. Players can reset their island and progress by typing /ob IDReset.
+                </h4>
+                <h4>
+                  3. Play OneBlock by destroying the regenerating grass block. The goal of OneBlock is to build an island using only the given resources.
+                </h4>
+                <h3>Commands</h3>
+                <h4>
+/ob set - Sets the first block. Run this once while in the air.</h4>
+                <h4>
+/ob set [radius] - Replace [radius] with a value between 100 and 500. This command changes the distance islands can spawn from each other.</h4>
+                <h4>
+/ob circlemode [true | false] - Tells the plugin to create new islands in a circular pattern.</h4>
+                <h4>
+/ob join - Joins the first available island.</h4>
+                <h4>
+/ob autojoin [true | false] - Sets if players are automatically sent to their island when joining the world.</h4>
+                <h4>
+/ob protection [true | false] - When set to true, players cannot leave their island.</h4>
+                <h4>
+/ob droptossup [true | false] - When set to true, items are spawned one block above the regenerating block instead of being dropped as usual.</h4>
+                <h4>
+/ob physics [true | false] - When set to true, it allows blocks such as sand or gravel to experience gravity.</h4>
+                <h4>
+/ob invite [player] - Invites a player to join the island.</h4>
+                <h4>
+/ob accept - Accepts an invitation from another player.</h4>
+                <h4>
+/ob kick [player] - Kicks player off the island.</h4>
+                <h4>
+/ob IDReset - Resets all progress, Players will lose their level and island so that a new island can be created.</h4>
+                <h4>
+/ob islands [true | false] - If set to true, new islands will be automatically created for new players.</h4>
+                <h4>
+/ob islands set_my_by_def - Uses own island as the default template for new players.</h4>
+                <h4>
+/ob islands default - Resets the island template to the default. (One grass block)</h4>
+                <h4>
+/ob island_rebirth [true | false] - When set to true, players will respawn on their island instead of the default world spawn.</h4>
+                <h4>
+/ob progress_bar color [color] - Changes the color of the progress bar.</h4>
+                <h4>
+/ob progress_bar [true | false] - If set to true, this command will display the progress bar at the top of the screen.</h4>
+                <h4>
+/ob clear [player] - An admin command used to reset a player's progress.
+</h4>
                 <h3>How to invite a friend to the island?</h3>
                 <h4>You write "/ob invite 'playername'". Your friend writes "/ob accept".</h4>
                 <h3>How to leave the island?</h3>
