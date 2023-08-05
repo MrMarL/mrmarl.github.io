@@ -1,4 +1,4 @@
-.paypal{
+.donat{
     position: relative;
     float: right;
     display: flex;
@@ -14,10 +14,11 @@
     margin-left: auto;
     margin-right: auto;
 }
-.paypal_main a >img {
+.donat_main a >img {
     margin: 5px;
+    width: 35px;
 }
-.paypal_main{
+.paypal_main,  .donat_main{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
@@ -27,24 +28,29 @@
     height: 190px;
     align-items: center;
     width: 100%;
-    background: url("https://www.paypalobjects.com/profiles/cover/yellow.jpg") 50% 0% / cover no-repeat;
+    background: url("http://gamerwall.pro/uploads/posts/2022-05/1652383610_37-gamerwall-pro-p-oranzhevii-minimalizm-oboi-krasivo-51.jpg") 50% 0% / cover no-repeat;
     border-radius: 5% 5% 100% 100% / 10% 10% 50% 50%;
 }
-.paypal .fon{
+
+.paypal_main {
+    background: url("https://www.paypalobjects.com/profiles/cover/yellow.jpg") 50% 0% / cover no-repeat;
+}
+
+.donat .fon{
     width: 28%;
     height: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
 }
-.paypal_main div img {
+.donat_main div img {
     width: 100%;
     border: ridge #fff 6px;
     border-radius: 100%;
     position: relative;
     z-index: 1;
 }
-.paypal .opis{
+.donat .opis{
     position: absolute;
     top: 130px;
     background-color: #fff;
@@ -55,13 +61,13 @@
     display: flex;
     flex-direction: column;
 }
-.paypal .opis a{
+.donat .opis a{
     font-family: PayPalSansBig-Regular,Helvetica,Arial,sans-serif;
     color: #000;
     font-size: 1.1rem;
     margin-bottom: 32px;
 }
-.paypal .opis span{
+.donat .opis span{
     font-family: PayPalSansBig-Regular,Helvetica,Arial,sans-serif;
     color: rgb(94, 94, 94);
     font-size: 1.1rem;
