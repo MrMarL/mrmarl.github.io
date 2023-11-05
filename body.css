@@ -60,8 +60,8 @@ body {
 }
 .panel {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10pt;
-    height: 30px;
+    font-size: 18pt;
+    height: 35px;
     width: 100%;
     background: linear-gradient(0deg, rgb(255, 240, 31), rgb(255, 150, 33));
     display: flex;
