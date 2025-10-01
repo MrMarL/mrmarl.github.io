@@ -1,92 +1,523 @@
-.steam{
-    background-image: url( 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/991980/fb35c9934621215738372c5ae8689fe37ecd9d6d.jpg' );
+@font-face {
+    font-family: 'Gotham-Bold'; 
+    src: url(../fonts/14006.otf); 
 }
-.ramka{
-    position: absolute;
+@font-face {
+    font-family: 'RotisSansSerif'; 
+    src: url(../fonts/RotisSansSerifW1G-Bold.otf); 
 }
-.steam2{
-    display: flex;
-    position: relative;
-    width: auto;
-    background: linear-gradient(135deg, #33333390, #74254a70);
+
+* {
+    box-sizing: border-box;
 }
-.steam2>img{
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham-Bold', sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-}
-h2 , h5{
-    color: #fff;
-    font-family: 'Gotham-Bold';
-}
-.to_steam{
-    margin-top: 90px;
-    height: 30px;
-    width: 140px;
-    background-color: #5c5c5c;
-    border-radius: 20px;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    color: #000;
-    font-family: RotisSansSerif;
+    flex-direction: column;
+    gap: 30px;
 }
-.to_steam:hover{
-    background-color: #808080;
-}
-.coub{
-    position: relative;
-    display: flex;
-    width: auto;
-    background-color: #333333;
-    overflow: hidden;
-    height: 270px;
-    align-items: center;
-}
-.coub video{
-    height: 675px;
-    width: 1200px;
-    position: absolute;
-    top: -100px;
-}
-.coub img{
-    z-index: 2;
-    height: 200px;
-    width: 200px;
-    margin: 18px;
-}
-.coub div{
-    z-index: 2;
-}
-.to_coub{
-    margin-top: 60px;
+
+.header {
+    text-align: center;
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #ffffff00 0%, #2d2d2d 100%);
+    border-radius: 0 0 20px 20px;
     margin-bottom: 30px;
-    height: 30px;
-    width: 140px;
-    background-color: #0000003a;
+}
+
+.slogan h1 {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(45deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.slogan h6 {
+    font-family: 'RotisSansSerif';
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+    color: #888888;
+    font-weight: normal;
+}
+
+.card {
+    background: #1a1a1a;
     border-radius: 20px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: #000;
-    font-family: RotisSansSerif;
+    padding: 0;
+    transition: all 0.3s ease;
+    border: 1px solid #333333;
+    overflow: hidden;
 }
-.to_coub:hover{
-    background-color: #000000a6;
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    border-color: #555555;
 }
-.coub h2{
-    font-size: 50px
-}
-.ip {
-    position: fixed;
-    right: 5px;
-    bottom: 10px;
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
     display: block;
-    z-index: 3;
-    filter: invert();
+    height: 100%;
 }
-    /* только для устройств с малым размером экрана */
-    @media (max-width:686px) {
-    .ip {
-        right: 0px;
-        max-width: 100%;
+
+/* Steam Card */
+.steam-card {
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 100%);
+}
+
+.steam-content {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+.avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.steam-icon {
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.profile-gif {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    z-index: 2;
+    margin: 15px;
+}
+
+.info-section {
+    z-index: 2;
+}
+
+.info-section h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.location img {
+    width: 16px;
+    height: 11px;
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Coub Card */
+.coub-card {
+    position: relative;
+    height: 300px;
+}
+
+.coub-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.coub-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.coub-media .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.coub-info {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    height: 100%;
+}
+
+.coub-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.coub-text h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+}
+
+/* Donation Cards */
+.donation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.donat-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.donat-card.paypal-card {
+    background: linear-gradient(135deg, #003087 0%, #009cde 100%);
+}
+
+.donat-header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.service-logo {
+    height: 30px;
+    width: auto;
+}
+
+.donat-content {
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.donat-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.donat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.username {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.description {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* OneBlock Card */
+.oneblock-card {
+    text-align: center;
+    padding: 40px;
+}
+
+.oneblock-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.oneblock-title {
+    font-size: 2rem;
+    background: linear-gradient(45deg, #ffa500, #ff6b00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.oneblock-card:hover .oneblock-title {
+    transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects-section {
+    margin-top: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #333333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.15);
+    border-color: #555555;
+}
+
+.project-icon {
+    margin-bottom: 20px;
+}
+
+.project-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon img {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ffa500, #ff6b00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.project-description {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #cccccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* Specific project card colors */
+.projects-grid .project-card:nth-child(1) {
+    border-left: 4px solid #ff6b00;
+}
+
+.projects-grid .project-card:nth-child(2) {
+    border-left: 4px solid #007bff;
+}
+
+.projects-grid .project-card:nth-child(3) {
+    border-left: 4px solid #fa5c5c;
+}
+
+.projects-grid .project-card:nth-child(4) {
+    border-left: 4px solid #00b894;
+}
+
+.projects-grid .project-card:nth-child(5) {
+    border-left: 4px solid #fdcb6e;
+}
+
+.projects-grid .project-card:nth-child(6) {
+    border-left: 4px solid #6c5ce7;
+}
+
+/* Responsive design for projects */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        margin-top: 30px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        padding: 25px 20px;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-icon img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .project-tags {
+        gap: 6px;
+    }
+    
+    .tag {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .slogan h1 {
+        font-size: 2rem;
+    }
+    
+    .steam-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .avatar-section {
+        flex-direction: column;
+    }
+    
+    .coub-info {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .coub-text h2 {
+        font-size: 2rem;
+    }
+    
+    .donation-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .oneblock-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 15px;
+    }
+    
+    .slogan h1 {
+        font-size: 1.8rem;
+    }
+    
+    .steam-content,
+    .coub-info {
+        padding: 15px;
+    }
+    
+    .info-section h2,
+    .coub-text h2 {
+        font-size: 1.5rem;
     }
 }
