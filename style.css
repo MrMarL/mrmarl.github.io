@@ -257,32 +257,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* OneBlock Card */
-.oneblock-card {
-    text-align: center;
-    padding: 40px;
-}
-
-.oneblock-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-}
-
-.oneblock-title {
-    font-size: 2rem;
-    background: linear-gradient(45deg, #ffa500, #ff6b00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: all 0.3s ease;
-}
-
-.oneblock-card:hover .oneblock-title {
-    transform: scale(1.05);
-}
-
 /* Projects Section */
 .projects-section {
     margin-top: 50px;

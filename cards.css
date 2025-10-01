@@ -56,7 +56,6 @@
 .coub-card { animation-delay: 0.2s; }
 .donation-cards > *:nth-child(1) { animation-delay: 0.3s; }
 .donation-cards > *:nth-child(2) { animation-delay: 0.4s; }
-.oneblock-card { animation-delay: 0.5s; }
 
 /* Enhanced button styles */
 .action-btn {
@@ -83,16 +82,14 @@
 .steam-icon,
 .profile-gif,
 .coub-avatar,
-.donat-avatar,
-.oneblock-image {
+.donat-avatar {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .steam-icon:hover,
 .profile-gif:hover,
 .coub-avatar:hover,
-.donat-avatar:hover,
-.oneblock-image:hover {
+.donat-avatar:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
 }
@@ -224,8 +221,7 @@
     .steam-icon,
     .profile-gif,
     .coub-avatar,
-    .donat-avatar,
-    .oneblock-image {
+    .donat-avatar {
         transition: none;
         animation: none;
     }
