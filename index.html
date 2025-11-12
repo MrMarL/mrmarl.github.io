@@ -96,6 +96,55 @@
             </div>
         </div>
 
+        <!-- Crypto Donation Card - Full Width -->
+        <div class="crypto-card card">
+            <div class="crypto-header">
+                <img src="./source/usdc.png" alt="Crypto" class="crypto-logo">
+            </div>
+            <div class="crypto-content">
+                <div class="crypto-networks">
+                    <div class="crypto-network">
+                        <div class="network-info">
+                            <div class="network-icon-wrapper">
+                                <img src="./source/eth_logo.svg" alt="Ethereum" class="network-icon">
+                            </div>
+                            <div class="network-details">
+                                <h3>Ethereum (ETH)</h3>
+                                <p>ERC-20 network</p>
+                            </div>
+                        </div>
+                        <div class="address-section">
+                            <code class="crypto-address">0x05d393ca3a337c802030370f66ee8d99c3eef5cf</code>
+                            <button class="copy-btn" data-address="0x05d393ca3a337c802030370f66ee8d99c3eef5cf">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="crypto-network">
+                        <div class="network-info">
+                            <div class="network-icon-wrapper">
+                                <img src="./source/pol-token.svg" alt="Polygon" class="network-icon">
+                            </div>
+                            <div class="network-details">
+                                <h3>Polygon (MATIC)</h3>
+                                <p>Polygon PoS network</p>
+                            </div>
+                        </div>
+                        <div class="address-section">
+                            <code class="crypto-address">0x05d393ca3a337c802030370f66ee8d99c3eef5cf</code>
+                            <button class="copy-btn" data-address="0x05d393ca3a337c802030370f66ee8d99c3eef5cf">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="crypto-note">
+                    <p>⚠️ Send only ETH on Ethereum network and MATIC on Polygon network</p>
+                </div>
+            </div>
+        </div>
+
          <!-- Projects Section -->
         <div class="projects-section">
             <h2 class="section-title">My Projects</h2>
@@ -197,5 +246,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Copy crypto address functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const address = this.getAttribute('data-address');
+                const originalText = this.textContent;
+                
+                navigator.clipboard.writeText(address).then(() => {
+                    this.textContent = 'Copied!';
+                    this.style.background = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    this.textContent = 'Error';
+                    this.style.background = '#f44336';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
