@@ -17,6 +17,10 @@
     </div>
     
     <div class="container">
+
+        <!-- Matrix Background Canvas -->
+        <canvas id="matrix-bg"></canvas>
+
         <div class="steam-card card">
             <a href="https://steamcommunity.com/id/MrMarL/" class="card-link">
                 <div class="steam-content">
@@ -248,6 +252,88 @@
     </div>
 
     <script>
+        // Matrix Background Animation
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        // Matrix characters
+        const matrixChars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const chars = matrixChars.split('');
+
+        const fontSize = 24;
+        let columns = 0;
+        const drops = [];
+        
+        // Настройки скорости
+        const speed = 0.6;
+        const resetChance = 0.985; // Больше = реже сбрасываются
+
+        // Initialize
+        function initMatrix() {
+            resizeCanvas();
+            columns = Math.floor(canvas.width / fontSize);
+            
+            drops.length = 0;
+            for (let i = 0; i < columns; i++) {
+                drops[i] = Math.floor(Math.random() * -100);
+            }
+        }
+
+        // Draw the matrix
+        function drawMatrix() {
+            // Полупрозрачный черный фон для эффекта шлейфа
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Более прозрачный для более долгого шлейфа
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Цвет символов - можно изменить на другой оттенок зеленого
+            ctx.fillStyle = '#00ff00'; // Яркий зеленый
+            ctx.font = `bold ${fontSize}px monospace`;
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+                
+                // Добавляем эффект разной яркости
+                const brightness = 0.5 + (Math.random() * 0.5); // От 0.5 до 1.0
+                ctx.fillStyle = `rgba(0, 255, 0, ${brightness})`;
+                
+                // Рисуем символ
+                ctx.fillText(text, x, y);
+                
+                // Сбрасываем каплю если она достигла низа или случайно
+                if (y > canvas.height && Math.random() > resetChance) {
+                    drops[i] = 0;
+                }
+                
+                // Увеличиваем позицию с учетом скорости
+                drops[i] += speed;
+            }
+        }
+
+        // Animation loop
+        let lastTime = 0;
+        const interval = 1000 / 20; // 20 FPS вместо 60 (быстрее = плавнее, но можно уменьшить)
+
+        function animate(currentTime) {
+            if (!lastTime || currentTime - lastTime >= interval) {
+                drawMatrix();
+                lastTime = currentTime;
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // Инициализация и запуск
+        window.addEventListener('resize', initMatrix);
+        initMatrix();
+        animate();
+
         // Copy crypto address functionality
         document.querySelectorAll('.copy-btn').forEach(button => {
             button.addEventListener('click', function() {
