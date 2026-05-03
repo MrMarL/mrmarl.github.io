@@ -172,7 +172,7 @@
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
                 <!-- OneBlock -->
-                <div class="project-card card">
+                <div class="project-card card" data-project="oneblock">
                     <a href="https://modrinth.com/plugin/oneblock_bukkit" class="card-link">
                         <div class="project-icon">
                             <img src="https://cdn.modrinth.com/data/gMMDcC2d/986cc09005ff89787d557b3e6b704984d6f1d6cc.gif" alt="OneBlock">
@@ -187,45 +187,62 @@
                     </a>
                 </div>
 
-                <!-- RuStore -->
-                <div class="project-card card">
-                    <a href="https://www.rustore.ru/catalog/app/com.mrmarl.rookthelastdefense" class="card-link">
-                        <div class="project-icon">
-                            <img src="https://static.rustore.ru/2026/1/23/67/apk/2063689983/content/ICON/b19bb0b4-108c-497b-a6a8-fa1904ae56ee.png" alt="Chess">
-                        </div>
-                        <h3 class="project-title">Ладья: Последняя Оборона</h3>
-                        <p class="project-description">RuStore версия - Вы — черная ладья. Ваша задача — удерживать оборону как можно дольше.</p>
-                        <div class="project-tags">
-                            <span class="tag">Android</span>
-                            <span class="tag">Game</span>
-                            <span class="tag">RuStore</span>
-                        </div>
-                    </a>
+                <!-- Rook: The Last Defense -->
+                <div class="project-card card" data-project="rook">
+                    <div class="project-icon">
+                        <img src="https://static.rustore.ru/2026/1/23/67/apk/2063689983/content/ICON/b19bb0b4-108c-497b-a6a8-fa1904ae56ee.png" alt="Rook Defense">
+                    </div>
+                    <h3 class="project-title">Rook: The Last Defense</h3>
+                    <p class="project-description">You are the black rook. Your mission is to maintain the defense for as long as you can.</p>
+                    <div class="project-tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">Game</span>
+                    </div>
+                    <div class="project-platforms">
+                        <button class="platform-btn rustore-btn" onclick="openPlatform('https://www.rustore.ru/catalog/app/com.mrmarl.rookthelastdefense')">
+                            <img src="./source/rustore-icon.svg" alt="RuStore" class="platform-icon">
+                            <span>RuStore</span>
+                        </button>
+                        <button class="platform-btn itch-btn" onclick="openPlatform('https://mrmarl.itch.io/rook-the-last-defense')">
+                            <img src="./source/itchio-icon.svg" alt="Itch.io" class="platform-icon">
+                            <span>Itch.io</span>
+                        </button>
+                    </div>
                 </div>
 
-                 <!-- Chess with Shotgun RuStore -->
-                <div class="project-card card">
-                    <a href="https://www.rustore.ru/catalog/app/com.mrmarl.shotgunking" class="card-link">
-                        <div class="project-icon">
-                            <img src="https://static.rustore.ru/2026/1/11/66/apk/2063590657/content/ICON/66c54ab2-1eeb-4cfc-83b1-7feb42cd49f6.png" alt="Chess">
-                        </div>
-                        <h3 class="project-title">Шахматы с дробовиком</h3>
-                        <p class="project-description">RuStore версия - забудьте о тишине и спокойствии шахматных партий!</p>
-                        <div class="project-tags">
-                            <span class="tag">Android</span>
-                            <span class="tag">Game</span>
-                            <span class="tag">RuStore</span>
-                        </div>
-                    </a>
+                <!-- Chess with Shotgun -->
+                <div class="project-card card" data-project="chess-shotgun">
+                    <div class="project-icon">
+                        <img src="https://static.rustore.ru/2026/1/11/66/apk/2063590657/content/ICON/66c54ab2-1eeb-4cfc-83b1-7feb42cd49f6.png" alt="Chess with Shotgun">
+                    </div>
+                    <h3 class="project-title">Chess with Shotgun</h3>
+                    <p class="project-description">Forget the silence of chess games — strategic chaos awaits!</p>
+                    <div class="project-tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">Game</span>
+                    </div>
+                    <div class="project-platforms">
+                        <button class="platform-btn rustore-btn" onclick="openPlatform('https://www.rustore.ru/catalog/app/com.mrmarl.shotgunking')">
+                            <img src="./source/rustore-icon.svg" alt="RuStore" class="platform-icon">
+                            <span>RuStore</span>
+                        </button>
+                        <button class="platform-btn itch-btn" onclick="openPlatform('https://mrmarl.itch.io/the-ultimate-checkmate')">
+                            <img src="./source/itchio-icon.svg" alt="Itch.io" class="platform-icon">
+                            <span>Itch.io</span>
+                        </button>
+                    </div>
                 </div>
 
+                <!-- TileWorld -->
                 <div class="project-card card">
                     <a href="https://www.rustore.ru/catalog/app/com.mrmarl.tileworld" class="card-link">
                         <div class="project-icon">
-                            <img src="https://static.rustore.ru/imgproxy/5eHHwY5h6Sl1StFd1_9L9jXc2ngv4OBInTbDYQYItV0/preset:web_app_icon_62/plain/https://static.rustore.ru/2025/9/30/e8/apk/2063585177/content/ICON/134c5e49-0802-47ae-b384-bbc3abb958db.png@webp" alt="Chess">
+                            <img src="https://static.rustore.ru/imgproxy/5eHHwY5h6Sl1StFd1_9L9jXc2ngv4OBInTbDYQYItV0/preset:web_app_icon_62/plain/https://static.rustore.ru/2025/9/30/e8/apk/2063585177/content/ICON/134c5e49-0802-47ae-b384-bbc3abb958db.png@webp" alt="TileWorld">
                         </div>
-                        <h3 class="project-title">TileWorld - Соседние Зоны</h3>
-                        <p class="project-description">RuStore версия - Построй свой мир!</p>
+                        <h3 class="project-title">TileWorld - Neighbor Zones</h3>
+                        <p class="project-description">Build your own world!</p>
                         <div class="project-tags">
                             <span class="tag">Android</span>
                             <span class="tag">Game</span>
@@ -234,45 +251,43 @@
                     </a>
                 </div>
 
-                <!-- Itch.io -->
+                <!-- DragonMinesweeper -->
                 <div class="project-card card">
-                    <a href="https://mrmarl.itch.io/rook-the-last-defense" class="card-link">
+                    <a href="https://www.rustore.ru/catalog/app/com.mrmarl.dragonsweeper" class="card-link">
                         <div class="project-icon">
-                            <img src="https://static.rustore.ru/2026/1/23/67/apk/2063689983/content/ICON/b19bb0b4-108c-497b-a6a8-fa1904ae56ee.png" alt="Chess">
+                            <img src="https://static.rustore.ru/imgproxy/846geDpmUDP556lxKppzbfftvD5B274wSy7HdUa_GQc/preset:web_app_icon_62/plain/https://static.rustore.ru/2026/5/3/34/apk/2063711967/content/ICON/67331eaa-828b-49d7-a4a3-9c4885154192.png@webp" alt="TileWorld">
                         </div>
-                        <h3 class="project-title">Rook: The Last Defense</h3>
-                        <p class="project-description">Itch.io version - You are the black rook. Your mission is to maintain the defense for as long as you can.</p>
+                        <h3 class="project-title">The Dragon Fighter Minesweeper</h3>
+                        <p class="project-description">Defeat the dragon!</p>
                         <div class="project-tags">
-                            <span class="tag">WebGL</span>
                             <span class="tag">Android</span>
                             <span class="tag">Game</span>
-                            <span class="tag">Itch.io</span>
+                            <span class="tag">RuStore</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Chess with Shotgun Itch.io -->
+                <!-- Final station -->
                 <div class="project-card card">
-                    <a href="https://mrmarl.itch.io/the-ultimate-checkmate" class="card-link">
+                    <a href="https://www.rustore.ru/catalog/app/com.mrmarl.finalstation" class="card-link">
                         <div class="project-icon">
-                            <img src="https://static.rustore.ru/2026/1/11/66/apk/2063590657/content/ICON/66c54ab2-1eeb-4cfc-83b1-7feb42cd49f6.png" alt="Chess">
+                            <img src="https://static.rustore.ru/imgproxy/I1XRtFJeVhITQGlTSfVCh8c7HswGQlXtGCKNhpDpVLA/preset:web_app_icon_62/plain/https://static.rustore.ru/2026/4/29/52/apk/2063706539/content/ICON/af266119-97eb-4215-b20d-9b8d960fe7ad.png@webp" alt="TileWorld">
                         </div>
-                        <h3 class="project-title">Chess with Shotgun</h3>
-                        <p class="project-description">Itch.io version - strategic chaos</p>
+                        <h3 class="project-title">Final station</h3>
+                        <p class="project-description">Build your own railway empire!</p>
                         <div class="project-tags">
-                            <span class="tag">WebGL</span>
                             <span class="tag">Android</span>
                             <span class="tag">Game</span>
-                            <span class="tag">Itch.io</span>
+                            <span class="tag">RuStore</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Additional Plugin 1 -->
+                <!-- StackSpawners -->
                 <div class="project-card card">
                     <a href="https://modrinth.com/plugin/stackspawners" class="card-link">
                         <div class="project-icon">
-                            <img src="https://cdn.modrinth.com/data/kpJK8lz8/86a11ad8632ee0a8c93139848312201774e6944d_96.webp" alt="Protection">
+                            <img src="https://cdn.modrinth.com/data/kpJK8lz8/86a11ad8632ee0a8c93139848312201774e6944d_96.webp" alt="StackSpawners">
                         </div>
                         <h3 class="project-title">StackSpawners</h3>
                         <p class="project-description">This plugin changes the way the spawner works</p>
@@ -284,14 +299,14 @@
                     </a>
                 </div>
 
-                <!-- Additional Plugin 2 -->
+                <!-- HardcoreNecromancy -->
                 <div class="project-card card">
                     <a href="https://modrinth.com/plugin/hardcorenecromancy" class="card-link">
                         <div class="project-icon">
-                            <img src="https://cdn.modrinth.com/data/Z6tpXTGU/1b86d5185a0b9273f0d09990f06ad108287fc651_96.webp" alt="Economy">
+                            <img src="https://cdn.modrinth.com/data/Z6tpXTGU/1b86d5185a0b9273f0d09990f06ad108287fc651_96.webp" alt="HardcoreNecromancy">
                         </div>
                         <h3 class="project-title">HardcoreNecromancy</h3>
-                        <p class="project-description">This plugin that adds the feature to revive people in hardcore mode</p>
+                        <p class="project-description">This plugin adds the feature to revive people in hardcore mode</p>
                         <div class="project-tags">
                             <span class="tag">Minecraft</span>
                             <span class="tag">Game Mechanics</span>
@@ -412,6 +427,11 @@
                 });
             });
         });
+
+        // Функция для открытия платформы в новой вкладке
+        function openPlatform(url) {
+            window.open(url, '_blank');
+        }
     </script>
 </body>
 </html>
