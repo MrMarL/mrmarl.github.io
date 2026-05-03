@@ -341,7 +341,7 @@
         const matrixChars = "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         const chars = matrixChars.split('');
 
-        const fontSize = 24;
+        const fontSize = 32;
         let columns = 0;
         const drops = [];
         
@@ -363,11 +363,9 @@
         // Draw the matrix
         function drawMatrix() {
             // Полупрозрачный черный фон для эффекта шлейфа
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Более прозрачный для более долгого шлейфа
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
-            // Цвет символов - можно изменить на другой оттенок зеленого
-            ctx.fillStyle = '#00ff00'; // Яркий зеленый
             ctx.font = `bold ${fontSize}px monospace`;
             
             for (let i = 0; i < drops.length; i++) {
@@ -375,9 +373,22 @@
                 const x = i * fontSize;
                 const y = drops[i] * fontSize;
                 
-                // Добавляем эффект разной яркости
-                const brightness = 0.5 + (Math.random() * 0.5); // От 0.5 до 1.0
-                ctx.fillStyle = `rgba(0, 255, 0, ${brightness})`;
+                // Яркие фиолетовые оттенки с неоновым эффектом
+                const red = 200 + Math.floor(Math.random() * 55);     // 200-255
+                const green = 50 + Math.floor(Math.random() * 100);   // 50-150
+                const blue = 240 + Math.floor(Math.random() * 15);    // 240-255
+                const alpha = 0.7 + (Math.random() * 0.3);            // Прозрачность 0.7-1.0
+                
+                ctx.fillStyle = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+                
+                // Добавляем свечение для ярких символов
+                if (Math.random() > 0.7) {
+                    ctx.shadowColor = `rgba(200, 50, 255, 0.8)`;
+                    ctx.shadowBlur = 10;
+                } else {
+                    ctx.shadowColor = 'transparent';
+                    ctx.shadowBlur = 0;
+                }
                 
                 // Рисуем символ
                 ctx.fillText(text, x, y);

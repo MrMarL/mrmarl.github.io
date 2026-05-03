@@ -280,7 +280,7 @@ body {
 }
 
 .project-card {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
     padding: 30px;
     text-align: center;
     transition: all 0.3s ease;
@@ -352,30 +352,30 @@ body {
     color: #ffffff;
 }
 
-/* Specific project card colors */
 .projects-grid .project-card:nth-child(1) {
-    border-left: 4px solid #ff6b00;
+    border-left: 4px solid #00ff00; /* OneBlock - зеленый для разнообразия */
 }
 
 .projects-grid .project-card:nth-child(2) {
-    border-left: 4px solid #007bff;
+    border-left: 4px solid #007bff; /* Rook: The Last Defense - синий */
 }
 
 .projects-grid .project-card:nth-child(3) {
-    border-left: 4px solid #fa5c5c;
+    border-left: 4px solid #fa5c5c; /* Chess with Shotgun - красный */
 }
 
 .projects-grid .project-card:nth-child(4) {
-    border-left: 4px solid #00b894;
+    border-left: 4px solid #7c3aed; /* TileWorld - темно-фиолетовый */
 }
 
 .projects-grid .project-card:nth-child(5) {
-    border-left: 4px solid #fdcb6e;
+    border-left: 4px solid #8b5cf6; /* DragonMinesweeper - фиолетовый */
 }
 
 .projects-grid .project-card:nth-child(6) {
-    border-left: 4px solid #6c5ce7;
+    border-left: 4px solid #a78bfa; /* Final station - светло-фиолетовый */
 }
+
 
 /* Matrix Background */
 #matrix-bg {
