@@ -424,6 +424,62 @@
     opacity: 1;
 }
 
+/* Стили для кнопок Modrinth и GitHub */
+.modrinth-btn:hover {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+}
+
+.github-btn:hover {
+    background: rgba(139, 92, 246, 0.2); /* Ярко-фиолетовый */
+    border-color: #8b5cf6;
+}
+
+/* Подсветка кнопок OneBlock при наведении на карточку */
+.project-card[data-project="oneblock"]:hover .modrinth-btn {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+.project-card[data-project="oneblock"]:hover .github-btn {
+    background: rgba(139, 92, 246, 0.3); /* Ярче при hover на карточку */
+    border-color: #8b5cf6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); /* Более яркая тень */
+}
+
+/* Усиление при наведении на конкретную кнопку */
+.project-card[data-project="oneblock"]:hover .modrinth-btn:hover {
+    background: rgba(0, 255, 0, 0.4);
+    border-color: #00ff00;
+    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.5);
+}
+
+.project-card[data-project="oneblock"]:hover .github-btn:hover {
+    background: rgba(139, 92, 246, 0.5);
+    border-color: #a78bfa;
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.6);
+    color: #ffffff;
+}
+
+/* Анимация иконок Modrinth и GitHub */
+.project-card[data-project="oneblock"]:hover .modrinth-btn .platform-icon {
+    filter: brightness(1.2) drop-shadow(0 0 3px rgba(0, 255, 0, 0.5));
+}
+
+.project-card[data-project="oneblock"]:hover .github-btn .platform-icon {
+    filter: brightness(1.3) drop-shadow(0 0 5px rgba(139, 92, 246, 0.8));
+}
+
+.github-btn:hover {
+    background: rgba(139, 92, 246, 0.4);
+    border-color: #a78bfa;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+    transform: translateY(-2px);
+}
+
 /* Responsive design for platform buttons */
 @media (max-width: 480px) {
     .project-platforms {
