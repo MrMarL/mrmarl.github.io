@@ -342,36 +342,6 @@
 
 .platform-btn:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
-/* Подсветка кнопок при наведении на карточку */
-.project-card[data-project]:hover .rustore-btn {
-    background: rgba(0, 123, 255, 0.2);
-    border-color: #007bff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-}
-
-.project-card[data-project]:hover .itch-btn {
-    background: rgba(250, 92, 92, 0.2);
-    border-color: #fa5c5c;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(250, 92, 92, 0.3);
-}
-
-/* Усиление при наведении на конкретную кнопку */
-.project-card[data-project]:hover .rustore-btn:hover {
-    background: rgba(0, 123, 255, 0.4);
-    border-color: #007bff;
-    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.5);
-}
-
-.project-card[data-project]:hover .itch-btn:hover {
-    background: rgba(250, 92, 92, 0.4);
-    border-color: #fa5c5c;
-    box-shadow: 0 5px 20px rgba(250, 92, 92, 0.5);
 }
 
 .platform-icon {
@@ -380,17 +350,100 @@
     transition: transform 0.3s ease;
 }
 
-/* Анимация иконок при наведении */
+/* Цвета для разных платформ */
+.rustore-btn {
+    --platform-color: #007bff;
+    --platform-color-light: rgba(0, 123, 255, 0.5);
+}
+
+.itch-btn {
+    --platform-color: #fa5c5c;
+    --platform-color-light: rgba(250, 92, 92, 0.5);
+}
+
+.modrinth-btn {
+    --platform-color: #00ff00;
+    --platform-color-light: rgba(0, 255, 0, 0.5);
+}
+
+.github-btn {
+    --platform-color: #8b5cf6;
+    --platform-color-light: rgba(139, 92, 246, 0.5);
+}
+
+/* Подсветка кнопок при наведении на карточку */
+.project-card[data-project]:hover .platform-btn {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.project-card[data-project]:hover .rustore-btn {
+    background: rgba(0, 123, 255, 0.2);
+    border-color: var(--platform-color);
+    box-shadow: 0 5px 15px var(--platform-color-light);
+}
+
+.project-card[data-project]:hover .itch-btn {
+    background: rgba(250, 92, 92, 0.2);
+    border-color: var(--platform-color);
+    box-shadow: 0 5px 15px var(--platform-color-light);
+}
+
+.project-card[data-project]:hover .modrinth-btn {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: var(--platform-color);
+    box-shadow: 0 5px 15px var(--platform-color-light);
+}
+
+.project-card[data-project]:hover .github-btn {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--platform-color);
+    box-shadow: 0 5px 15px var(--platform-color-light);
+}
+
+/* Усиление при наведении на конкретную кнопку */
+.project-card[data-project]:hover .platform-btn:hover {
+    border-color: var(--platform-color);
+    box-shadow: 0 5px 20px var(--platform-color-light);
+}
+
+.project-card[data-project]:hover .rustore-btn:hover {
+    background: rgba(0, 123, 255, 0.4);
+}
+
+.project-card[data-project]:hover .itch-btn:hover {
+    background: rgba(250, 92, 92, 0.4);
+}
+
+.project-card[data-project]:hover .modrinth-btn:hover {
+    background: rgba(0, 255, 0, 0.4);
+}
+
+.project-card[data-project]:hover .github-btn:hover {
+    background: rgba(139, 92, 246, 0.5);
+    border-color: #a78bfa;
+    color: #ffffff;
+}
+
+/* Анимация иконок при наведении на карточку */
 .project-card[data-project]:hover .platform-icon {
     transform: scale(1.1);
 }
 
 .project-card[data-project]:hover .rustore-btn .platform-icon {
-    filter: brightness(1.2) drop-shadow(0 0 3px rgba(0, 123, 255, 0.5));
+    filter: brightness(1.2) drop-shadow(0 0 3px var(--platform-color-light));
 }
 
 .project-card[data-project]:hover .itch-btn .platform-icon {
-    filter: brightness(1.2) drop-shadow(0 0 3px rgba(250, 92, 92, 0.5));
+    filter: brightness(1.2) drop-shadow(0 0 3px var(--platform-color-light));
+}
+
+.project-card[data-project]:hover .modrinth-btn .platform-icon {
+    filter: brightness(1.2) drop-shadow(0 0 3px var(--platform-color-light));
+}
+
+.project-card[data-project]:hover .github-btn .platform-icon {
+    filter: brightness(1.3) drop-shadow(0 0 5px var(--platform-color-light));
 }
 
 /* Project cards без прямой ссылки */
@@ -403,81 +456,10 @@
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-/* Специфичные стили для карточек с платформами */
-.project-card[data-project="rook"]:hover {
-    border-left-color: #007bff;
-    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.2);
-}
-
-.project-card[data-project="chess-shotgun"]:hover {
-    border-left-color: #fa5c5c;
-    box-shadow: 0 15px 40px rgba(250, 92, 92, 0.2);
-}
-
 /* Анимация появления кнопок */
 .project-card[data-project] .platform-btn {
     opacity: 0.8;
     transition: all 0.3s ease;
-}
-
-.project-card[data-project]:hover .platform-btn {
-    opacity: 1;
-}
-
-/* Стили для кнопок Modrinth и GitHub */
-.modrinth-btn:hover {
-    background: rgba(0, 255, 0, 0.2);
-    border-color: #00ff00;
-}
-
-.github-btn:hover {
-    background: rgba(139, 92, 246, 0.2); /* Ярко-фиолетовый */
-    border-color: #8b5cf6;
-}
-
-/* Подсветка кнопок OneBlock при наведении на карточку */
-.project-card[data-project="oneblock"]:hover .modrinth-btn {
-    background: rgba(0, 255, 0, 0.2);
-    border-color: #00ff00;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
-}
-
-.project-card[data-project="oneblock"]:hover .github-btn {
-    background: rgba(139, 92, 246, 0.3); /* Ярче при hover на карточку */
-    border-color: #8b5cf6;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); /* Более яркая тень */
-}
-
-/* Усиление при наведении на конкретную кнопку */
-.project-card[data-project="oneblock"]:hover .modrinth-btn:hover {
-    background: rgba(0, 255, 0, 0.4);
-    border-color: #00ff00;
-    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.5);
-}
-
-.project-card[data-project="oneblock"]:hover .github-btn:hover {
-    background: rgba(139, 92, 246, 0.5);
-    border-color: #a78bfa;
-    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.6);
-    color: #ffffff;
-}
-
-/* Анимация иконок Modrinth и GitHub */
-.project-card[data-project="oneblock"]:hover .modrinth-btn .platform-icon {
-    filter: brightness(1.2) drop-shadow(0 0 3px rgba(0, 255, 0, 0.5));
-}
-
-.project-card[data-project="oneblock"]:hover .github-btn .platform-icon {
-    filter: brightness(1.3) drop-shadow(0 0 5px rgba(139, 92, 246, 0.8));
-}
-
-.github-btn:hover {
-    background: rgba(139, 92, 246, 0.4);
-    border-color: #a78bfa;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
-    transform: translateY(-2px);
 }
 
 /* Responsive design for platform buttons */
